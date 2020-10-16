@@ -1,12 +1,12 @@
 const insertiontri = (array) => {
     for (let i = 1; i < array.length; i++) {
-      let j = i - 1
+      let w = i - 1
       let temp = array[i]
-      while (j >= 0 , array[j] > temp) {
-        array[j + 1] = array[j]
-        j--
+      while (w >= 0 , array[w] > temp) {
+        array[w + 1] = array[w]
+        w--
       }
-      array[j+1] = temp
+      array[w+1] = temp
     }
     return array
 }
