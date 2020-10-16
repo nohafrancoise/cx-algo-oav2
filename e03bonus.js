@@ -1,17 +1,20 @@
-const selectiontri = Array => {
-    let swap, i, p, end, taille = Array.length;
-    do {
-      swap = false;
-      for (let i = 0; i < Array.length; i++) {
-          for (p = 0, end = taille -i; p < end; p++) {
-        if (Array[p] < Array[p + 1]) {
-          let tmp = Array[p];
-          Array[p] = Array[p + 1];
-          Array[p + 1] = tmp;
-          swap = true;}
+function selectiontri(array) {
+
+    for (var i = 0; i < array.length; i++) {
+
+        let m = i;
+
+     for (var j = i + 1; j < array.length; j++) {
+         if (array[m] > array[j]) {
+                m= j; 
+            }
         }
-      }
-    } while (swap);
-    return Array;
-  };
+
+        if (i !== m) {
+            [array[ i ],array[m]]= [array[m],array[ i ]];
+        }
+    }
+    return array
+}
+
   console.log(selectiontri([1, 7, 12, 567, 8, 90, 10, 0]))
