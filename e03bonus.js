@@ -1,4 +1,4 @@
-const bubbletri = Array => {
+const selectiontri = Array => {
     let swap, i, p, end, taille = Array.length;
     do {
       swap = false;
@@ -14,4 +14,4 @@ const bubbletri = Array => {
     } while (swap);
     return Array;
   };
-  console.log(bubbletri([1, 7, 12, 567, 8, 90, 10, 0]))
+  console.log(selectiontri([1, 7, 12, 567, 8, 90, 10, 0]))
